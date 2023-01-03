@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>!! For Better Health !!</title>
+    <!-- Bootstrap CSS -->
+      <!-- <script type="text/javascript" src="data/blogDataJson.js"></script> -->
+      <script src="blogDataJson.js"></script>
+      <link href="bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="CustomStyle.css">
+      <script src="SelectionFunctions.js"></script>
+      <link rel="stylesheet" href="CustomStyleMore.css">
+      <script src="PrintBlogs.js"></script>
+
+  </head>
+  <body>
+    <!-- Logo + Menu -->
+    <!---
+    <script type="text/javascript">
+            window.onload = function(){
+                alert("-----Disclaimer-----");
+            }
+    </script>
+    -->
+        <!-- Main Body -->
+     <div id="containterId" class="container">
+
+         <!-- Logo  -->
+         <div class="row" id="logoId">
+             <!-- Load javascript for Logo -->
+        </div>
+         <!--------------------------------->
+         <!-- Selection Menu  -->
+         <!--------------------------------->
+         <div class="row" id="CitySelectionID">
+            <div class="col-md-4">
+                <div class="customWhiteDiv">
+                    <!-- Country Selection -->
+                    <div class="MenuText"> Select Your Country </div>
+                    <div id="DivCountries">  </div>
+                    <script type="text/javascript">limitedCountriesDropdown("DivCountries");</script>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="customWhiteDiv">
+                    <!-- State Selection -->
+                    <div class="MenuText"> Select Your State </div>
+                    <div id="DivStates">  </div>
+                    <script type="text/javascript">limitedStatesDropdown("DivStates");</script>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="customWhiteDiv">
+                    <!-- City/Region Selection -->
+                    <div  class="MenuText"> Select Your City/Region </div>
+                    <div id="DivCities">  </div>
+                    <script type="text/javascript">limitedCitiesDropdown("DivCities", "UP");</script>
+                </div>
+            </div>
+         </div>
+         <!--------------------------------->
+         <!-- Second Level of Selection Menu  -->
+         <!--------------------------------->
+         <div class="row" id="HospitalSelectionID">
+            <div class="col-md-4">
+                <div class="customWhiteDiv">
+                    <!-- State Selection -->
+                    <div class="buttonStyle">
+                        <input type="button" class="btn btn-secondary btn-lg w-100" value="Hospital"
+                               onclick="GoToBlgs('Hospital')">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="customWhiteDiv">
+                    <!-- City/Region Selection -->
+                    <div class="buttonStyle">
+                        <input type="button" class="btn btn-secondary btn-lg w-100" value="Medicine"
+                               onclick="GoToBlgs('Medicine')">
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-4">
+                <div class="customWhiteDiv">
+                    <!-- City/Region Selection -->
+                    <div class="buttonStyle">
+                        <input type="button" class="btn btn-secondary btn-lg w-100" value="Food and Other"
+                               onclick="GoToBlgs('Food')">
+                    </div>
+                </div>
+             </div>
+         </div>
+         <!--------------------------------->
+         <!-- Blogs Body  -->
+         <!--------------------------------->
+
+         <!--
+         <div class="row" id="BlogRow">
+             <div class="col-md-6">
+                 <div class="customBlogDiv"> Middle Bar 1 </div>
+             </div>
+             <div class="col-md-6">
+                 <div class="customBlogDiv"> Middle Bar 2 </div>
+             </div>
+         </div>
+         -->
+         <!--------------------------------->
+
+     </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+      <script type="text/javascript">
+          const activities = document.getElementById('StateDropDown');
+          activities.addEventListener("change", (e) => {
+              limitedCitiesDropdown("DivCities", e.target.value)
+              //console.log(e.target.value);
+              //console.log(`e.target.value = ${ e.target.value }`);
+              //console.log(`activities.options[activities.selectedIndex].value = ${ activities.options[activities.selectedIndex].value }`);
+          });
+      </script>
+      <script type="text/javascript">
+                 // Load Logo Element
+            window.onload = loadLogo("logoId");
+      </script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- <script src="bootstrap/js/bootstrap.bundle.min.js" ></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
