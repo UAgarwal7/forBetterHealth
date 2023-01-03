@@ -1,0 +1,33 @@
+.logoDivCustom {
+    margin: 3px;
+    min-height: 80px;
+    background-color: lightgreen;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.logoDivCustomText {
+    margin: 3px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: medium;
+    font-weight: normal;
+}
+
+.MenuText {
+    padding: 8px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    margin: 4px;
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.buttonStyle {
+    padding: 20px;
+    padding-bottom: 30px;
+    padding-top: 40px;
+    width: 100%;
+}
